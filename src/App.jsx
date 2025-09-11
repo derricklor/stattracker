@@ -1,10 +1,8 @@
 import { useState, useEffect } from 'react'
 
-function App() {
+export default function App() {
     const [statTracker, setStatTracker] = useState({ items: [] });
     const [newItem, setNewItem] = useState('');
-    const [editingIndex, setEditingIndex] = useState(null);
-    const [editingText, setEditingText] = useState('');
 
     useEffect(() => {
         const storedStats = localStorage.getItem('statTracker');
@@ -87,5 +85,3 @@ function App() {
         </div>
     )
 }
-
-export default App
